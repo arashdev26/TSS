@@ -14,9 +14,9 @@ export default function Home() {
         height={1000}
         className="w-screen"
       />
-      {/* @ts-expect-error Server Component */}
+
       <Collections />
-      {/* @ts-expect-error Server Component */}
+
       <ProductList />
     </>
   )
