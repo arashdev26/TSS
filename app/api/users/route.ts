@@ -2,9 +2,10 @@ import User from '@/lib/models/User'
 import { connectToDB } from '@/lib/mongoDB'
 import { auth } from '@clerk/nextjs/server'
 
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
+//i have deleted nextrequest above and below
 
-export const GET = async (req: NextRequest) => {
+export const GET = async () => {
   try {
     const { userId } = auth()
 

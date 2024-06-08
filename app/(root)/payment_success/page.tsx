@@ -1,15 +1,15 @@
-"use client"
+'use client'
 
-import useCart from "@/lib/hooks/useCart";
-import Link from "next/link";
-import { useEffect } from "react";
+import useCart from '@/lib/hooks/useCart'
+import Link from 'next/link'
+import { useEffect } from 'react'
 
 const SuccessfulPayment = () => {
-  const cart = useCart();
+  const cart = useCart()
 
   useEffect(() => {
-    cart.clearCart();
-  }, []);
+    cart.clearCart()
+  }, [])
 
   return (
     <div className="h-screen flex flex-col justify-center items-center gap-5">
@@ -22,7 +22,8 @@ const SuccessfulPayment = () => {
         CONTINUE TO SHOPPING
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default SuccessfulPayment;
+export default SuccessfulPayment
+export const dynamic = 'force-dynamic'
