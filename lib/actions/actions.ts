@@ -1,5 +1,3 @@
-import { Store } from 'lucide-react'
-
 export const getCollections = async () => {
   const collections = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/collections`,
@@ -42,7 +40,7 @@ export const getSearchedProducts = async (query: string) => {
 export const getOrders = async (customerId: string) => {
   const orders = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/orders/customers/${customerId}`,
-    { cache: 'no-store' }
+    { next: { revalidate: 2 } }
   )
   return await orders.json()
 }
